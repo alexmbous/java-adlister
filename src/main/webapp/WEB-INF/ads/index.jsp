@@ -10,7 +10,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Hi ${sessionScope.user}!</h1>
+    <h1>YOOOO ${sessionScope.user}!</h1>
     <h1>Here Are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">

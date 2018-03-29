@@ -8,8 +8,13 @@ import java.io.IOException;
 @WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
-        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
 
+        if(request.getSession().getAttribute("username") != null) {
+            request.setAttribute("ads", DaoFactory.getAdsDao().all());
+
+        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+    } else {
+            response.sendRedirect("/login");
+        }
     }
 }

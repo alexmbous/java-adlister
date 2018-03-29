@@ -10,7 +10,10 @@
 <jsp:include page="WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Welcome, ${sessionScope.user}!</h1>
+    <h1>Welcome to the Adlister!</h1>
+    <br>
+    <br>
+        <h3>Please Log In.</h3>
 </div>
 
 </body>
