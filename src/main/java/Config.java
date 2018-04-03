@@ -1,6 +1,6 @@
 public class Config {
-    private String url = "jdbc:mysql://localhost/";
-    private String username = "root";
+    private String url = "jdbc:mysql://localhost/Ads";
+    private String username = "username1";
     private String password = "codeup";
 
     public String getUrl(){
@@ -14,4 +14,6 @@ public class Config {
     public String getPassword(){
         return password;
     }
+
+
 }
